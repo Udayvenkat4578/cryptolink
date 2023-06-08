@@ -29,14 +29,14 @@ useEffect(()=>{
       <div >
       
         
-        {data.length>0 ?<div className=" grid grid-cols-4 gap-6  p-5 border-2 border-gray-300">
+        {data.length>0 ?<div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  p-5 border-2 border-gray-300">
           {data.filter(crypto=>
         crypto.name.toLowerCase()
         .includes(search.toLowerCase()))
           .map(crypto=>
         
-          <div className='grid grid-rows-2   border-2 border-gray-200 shadow-lg rounded-md p-5 bg-white opacity-90'>
-           <div className='flex flex-cols-1'><p className='ml-3'></p><img class=" w-18 h-12 ml-11 pl-11  " src={crypto.icon} alt={crypto.name} /></div>
+          <div className='grid grid-rows-2   border-2 border-gray-200 shadow-lg rounded-md p-5 bg-white opacity-90 place-items-center'>
+           <div className='mr-11 pr-11'><img class=" w-18 h-12 ml-11 pl-11  " src={crypto.icon} alt={crypto.name} /></div>
           <div><p className='font-bold text-md text-center text-'>{crypto.name}</p></div>
           <div><p className='font-bold text-md text-center'><span>marketCap:</span> {Math.ceil(crypto.marketCap) }</p></div>
           <div><p className='font-bold text-md text-center'><span>marketprice:</span> {Math.ceil(crypto.price)}</p></div>
